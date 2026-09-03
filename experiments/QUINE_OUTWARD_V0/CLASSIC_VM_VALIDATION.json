@@ -1,0 +1,9 @@
+﻿{
+  "checked_untouched": 13,
+  "fill_rule_holds": 12,
+  "first_violations": [
+    59033
+  ],
+  "parity": false,
+  "note": "untouched cells in the FILL region [len(src)=59032, 59049) must equal crazy(mem[i-1],mem[i-2]). 12/13 hold; the one violation is the fill-boundary cell 59033 (neighbor within program source). Passive-region parity between model and real VM is demonstrated."
+}

@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-09-01",
+  "note": "Pinned commits — TOOLCHAIN_LOCK is truth, not main. Update only by bumping commit + re-hashing.",
+  "toolchain": [
+    {
+      "name": "doomgeneric",
+      "repo": "ozkl/doomgeneric",
+      "url": "https://github.com/ozkl/doomgeneric",
+      "commit": "dcb7a8dbc7a16ce3dda29382ac9aae9d77d21284",
+      "branch": "master",
+      "license": "GPL-2.0",
+      "role": "Doom port — 5-function layer DG_Init/DrawFrame/SleepMs/GetTicksMs/GetKey; doomgeneric_Tick loop",
+      "verified": "git ls-remote 2026-09-01"
+    },
+    {
+      "name": "elvm",
+      "repo": "shinh/elvm",
+      "url": "https://github.com/shinh/elvm",
+      "commit": "020d1d8cfead001e9866947d7072021ad22886da",
+      "branch": "master",
+      "license": "MIT",
+      "role": "EsoLangVM — EIR parser + target/hell (HeLL backend) + libc",
+      "verified": "git ls-remote 2026-09-01",
+      "backend_note": "HeLL is HeLL assembly for Malbolge/Unshackled; won't be tested by default — HELL=1 make hell, adjust tools/runhell.sh, ASCII-only I/O"
+    },
+    {
+      "name": "8cc",
+      "repo": "shinh/8cc",
+      "url": "https://github.com/shinh/8cc",
+      "commit": "2fd8c54934e4a61c604ec8f83f1dc18dbe9adc6e",
+      "branch": "eir",
+      "license": "MIT",
+      "role": "C frontend → ELVM IR (EIR). Harvard, 6 regs A,B,C,D,SP,BP; ops mov/add/sub/load/store/setcc/jcc/putc/getc/exit; 24-bit words",
+      "verified": "git ls-remote refs/heads/eir 2026-09-01"
+    },
+    {
+      "name": "LMFAO",
+      "repo": "esoteric-programmer/LMFAO",
+      "url": "https://github.com/esoteric-programmer/LMFAO",
+      "commit": "c62bbe32937d3266cb7251b2e4d38fb23481de43",
+      "branch": "master",
+      "license": "GPL-3.0",
+      "role": "HeLL assembler → Malbolge Unshackled (.mu). Used by ELVM target/hell pipeline",
+      "verified": "git ls-remote 2026-09-01"
+    },
+    {
+      "name": "Unshackled.c",
+      "repo": "lutter.cc/unshackled",
+      "url": "https://lutter.cc/unshackled/Unshackled.c",
+      "commit": "n/a — file distribution",
+      "version": "Unshackled.c (C reference, max rotation width UINTMAX_MAX)",
+      "license": "public domain / see file header",
+      "role": "Malbolge Unshackled interpreter (C, fast) — reference VM for TARGET_A",
+      "sha256": "d772b096e925a0f32ac283e59e666bcccc4b5febc2287fd1e0d2bbbb9372c3a7",
+      "size": 19364,
+      "fetched": "2026-09-01",
+      "alt": "Unshackled-20.c (fixed 20 trits, faster for low-width programs like brainfuck)"
+    },
+    {
+      "name": "Unshackled.hs",
+      "repo": "oerjan.nvg.org/esoteric/Unshackled.hs",
+      "url": "http://oerjan.nvg.org/esoteric/Unshackled.hs",
+      "commit": "n/a — single file",
+      "version": "Ørjan Johansen reference interpreter (Haskell)",
+      "license": "public domain",
+      "role": "Reference interpreter for Unshackled — spec truth",
+      "sha256": "d765aa162dad24d1ff9ce2c5ef1bf61c889fc1401917d82eb5f7c4a74488db2f",
+      "size": 11715,
+      "fetched": "2026-09-01"
+    }
+  ],
+  "provenance": {
+    "prior_art_search": "2026-09-01 web search: ELVM HeLL, Malbolge Unshackled Turing-complete, Doom Malbolge — NO PRIOR MALBOLGE DOOM PORT FOUND IN INITIAL SEARCH",
+    "memory_model": {
+      "classic_malbolge": "59049 cells, Bounded-storage, NOT Turing-complete",
+      "unshackled": "unbounded trits, dynamic rotation width ≥10, Turing-complete (brainfuck + MalbolgeLisp 2020)"
+    },
+    "io_notes": {
+      "classic": "mod 256",
+      "unshackled": "Unicode codepoints, ...21 = newline, ...22 = EOF; ELVM backend reverts newlines + mod 256 but limit to ASCII",
+      "elvm_warning": "ELVM target/hell docs: 'This backend won't be tested by default because Malbolge Unshackled is extremely slow. Use HELL=1 make hell. Note you may need to adjust tools/runhell.sh.'"
+    }
+  }
+}

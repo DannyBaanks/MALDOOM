@@ -1,0 +1,61 @@
+﻿{
+  "C_alone": {
+    "before": [
+      1,
+      0
+    ],
+    "after": [
+      1,
+      0
+    ],
+    "preserved": true
+  },
+  "two_macrocells_G1": {
+    "C1_after": [
+      0,
+      1
+    ],
+    "C2_after": [
+      0,
+      0
+    ],
+    "both_preserved": false,
+    "final_sha": "f3e32b06498d87a5"
+  },
+  "two_macrocells_G2": {
+    "C1_after": [
+      1,
+      0
+    ],
+    "C2_after": [
+      1,
+      0
+    ],
+    "both_preserved": true,
+    "final_sha": "4635ffb4f62f2ba6"
+  },
+  "two_macrocells_G3": {
+    "C1_after": [
+      0,
+      1
+    ],
+    "C2_after": [
+      0,
+      1
+    ],
+    "both_preserved": false,
+    "final_sha": "19d78c4d9fcb1cba"
+  },
+  "two_macrocells_G4": {
+    "C1_after": [
+      0,
+      0
+    ],
+    "C2_after": [
+      0,
+      0
+    ],
+    "both_preserved": false,
+    "final_sha": "4c2114dab4f50680"
+  }
+}

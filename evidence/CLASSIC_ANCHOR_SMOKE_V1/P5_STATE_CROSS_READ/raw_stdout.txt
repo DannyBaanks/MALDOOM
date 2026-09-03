@@ -1,0 +1,6 @@
+LEN=2 STATECOMPARE total=64 hits=0 len=2
+LEN=3 STATECOMPARE total=512 hits=0 len=3
+LEN=4 STATECOMPARE total=4096 hits=0 len=4
+LEN=5 STATECOMPARE total=32768 hits=0 len=5
+LEN=6 STATECOMPARE total=262144 hits=0 len=6
+LEN=7 STATECOMPARE total=2097152 hits=0 len=7

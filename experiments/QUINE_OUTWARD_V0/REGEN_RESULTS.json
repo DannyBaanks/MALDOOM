@@ -1,0 +1,117 @@
+﻿{
+  "model": "MALBOLGE_MEMORY_AS_CA_MODEL",
+  "N": 8,
+  "LO": 2,
+  "SIG": 4,
+  "expected": 1,
+  "single_cell_damage": [
+    {
+      "cell": 0,
+      "sig_after": 1,
+      "regenerated": true
+    },
+    {
+      "cell": 1,
+      "sig_after": 0,
+      "regenerated": false
+    },
+    {
+      "cell": 2,
+      "sig_after": 1,
+      "regenerated": true
+    },
+    {
+      "cell": 3,
+      "sig_after": 1,
+      "regenerated": true
+    },
+    {
+      "cell": 4,
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "cell": 5,
+      "sig_after": 0,
+      "regenerated": false
+    },
+    {
+      "cell": 6,
+      "sig_after": 0,
+      "regenerated": false
+    },
+    {
+      "cell": 7,
+      "sig_after": 0,
+      "regenerated": false
+    }
+  ],
+  "single_ok": 3,
+  "multi_cell_damage": [
+    {
+      "flip2": [
+        4,
+        0
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        1
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        2
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        3
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        4
+      ],
+      "sig_after": 0,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        5
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        6
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    },
+    {
+      "flip2": [
+        4,
+        7
+      ],
+      "sig_after": 2,
+      "regenerated": false
+    }
+  ],
+  "multi_ok": 0
+}

@@ -1,0 +1,38 @@
+{
+  "classic_memory": 59049,
+  "semantics": "Classic Malbolge — 59049 words, crazy op tritwise table [1,1,2,0,0,2,0,2,1], rot = n//3 + (n%3)*19683, XLAT1 '+b(29e*j1VMEKLyC})8&m#~W>qxdRp0wkrUo[D7,XTcA\"lI.v%{gJh4G\\-=O@5`_3i<?Z';FNQuY]szf$!BS/|t:Pn6^Ha', init mem[i]=crazy(mem[i-1],mem[i-2]), I/O mod 256",
+  "interpreters": [
+    {
+      "role": "PRIMARY",
+      "name": "gost",
+      "repo": "DannyBaanks/MalboGost (local gost.c)",
+      "file": "vendor/classic/gost.c",
+      "sha256": "ACBE79047D797DAD4E9DCACB97399EE3AD24CB2BAE8B7E11D51CE110B4D09588",
+      "binary": "vendor/classic/gost.exe",
+      "binary_sha256": "9A7AD87EC094EC0948974F5D600190C0D2DEBBEA645F4781CD7EEEDA7D679775",
+      "build": "gcc -O2 -o vendor/classic/gost.exe vendor/classic/gost.c",
+      "test": "hello.mal 64B SHA 956C134... → Hello World! in 40 steps, oracle 17/17 tests pass"
+    },
+    {
+      "role": "SECONDARY",
+      "name": "malbolge-oracle",
+      "repo": "malbolge-oracle (local)",
+      "file": "vendor/classic/oracle.py",
+      "sha256": "E7E71A24A7560AED944F178784567FDA29AFB228FCD91A41E8ED41C13430BF8D",
+      "type": "Python reference, shares no ancestry with gost",
+      "test": "python test_oracle.py → 17/17 OK, hello deterministic, step count pinned"
+    },
+    {
+      "role": "TERTIARY (alternative binary)",
+      "name": "malbolge-engine",
+      "file": "vendor/classic/malbolge-engine.exe",
+      "sha256": "9A7AD87EC094EC0948974F5D600190C0D2DEBBEA645F4781CD7EEEDA7D679775",
+      "note": "67885 B, Windows PE, pinned for cross-check if needed"
+    }
+  ],
+  "audit": {
+    "memory_59049_verified": "test_memory_is_three_to_the_tenth in oracle → ok",
+    "hello_world": "HELLO_WORLD 64B → Hello World! on both gost and oracle, 40 steps on gost",
+    "cross_check": "gost SHA 9A7AD..., oracle SHA E7E71..., both on same hello.mal produce same output (verified 2026-09-01)"
+  }
+}

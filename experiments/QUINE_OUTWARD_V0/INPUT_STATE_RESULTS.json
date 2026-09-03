@@ -1,0 +1,23 @@
+﻿{
+  "model": "MALBOLGE_MEMORY_AS_CA_MODEL",
+  "N": 8,
+  "LO": 2,
+  "results": {
+    "input_0": {
+      "state_bit": 0,
+      "sig_before": 2,
+      "sig_after_100": 0,
+      "sig_after_1000": 2,
+      "final_sha": "a3d827347d67a624"
+    },
+    "input_1": {
+      "state_bit": 1,
+      "sig_before": 3,
+      "sig_after_100": 0,
+      "sig_after_1000": 3,
+      "final_sha": "22666d72363ea264"
+    }
+  },
+  "distinguishable_at_100": false,
+  "distinguishable_at_1000": true
+}

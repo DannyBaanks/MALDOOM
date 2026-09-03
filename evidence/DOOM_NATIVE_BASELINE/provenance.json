@@ -1,0 +1,45 @@
+{
+  "wad_source_url": "https://github.com/freedoom/freedoom/releases/download/v0.13.0/freedoom-0.13.0.zip",
+  "zip_sha256": "3f9b264f3e3ce503b4fb7f6bdcb1f419d93c7b546f4df3e874dd878db9688f59",
+  "zip_size": 24143781,
+  "wad_file": "freedoom1.wad",
+  "wad_sha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "wad_size": 28795076,
+  "wad_first4": "IWAD",
+  "wad_header": {
+    "ident": "IWAD",
+    "numlumps": 3163,
+    "infotableofs": 28744468
+  },
+  "wad_license": "Freedoom BSD-3-Clause (redistributable). See https://github.com/freedoom/freedoom/blob/master/COPYING",
+  "doomgeneric_pinned": {
+    "repo": "ozkl/doomgeneric",
+    "commit": "dcb7a8dbc7a16ce3dda29382ac9aae9d77d21284",
+    "branch": "master"
+  },
+  "binaries": {
+    "doom_native_win.exe": {
+      "sha256": "F103BF3D22ECCA677187EC671FAF0AD70DD14ED1683112B0B6BF60CA4E7676EE",
+      "size": 654912,
+      "build": "gcc -std=gnu99 -O2 -Ivendor/doomgeneric -Ivendor/doomgeneric/doomgeneric + 83 core files + doom_sound_dummy.c + vendor/doomgeneric/doomgeneric/doomgeneric_win.c -lm -lgdi32 -lwinmm -luser32 -lcomdlg32",
+      "platform": "Win32 GDI, DOOMGENERIC_RESX=640 RESY=400, window WS_OVERLAPPEDWINDOW"
+    },
+    "doom_native_capture.exe": {
+      "sha256": "DCF88245BC9D804BEA7E6AB31A5140B3A01358D9A01B1DF9C165EB98ECA8CDBB",
+      "size": 655967,
+      "build": "same core + doom_win_capture.c (patched to dump DG_ScreenBuffer at frames 35,70,105,150,300)",
+      "note": "capture build adds static s_FrameCount and fwrite(DG_ScreenBuffer,4,640*400) without altering gameplay (only after StretchDIBits)"
+    }
+  },
+  "verification": {
+    "zip_sha_match": true,
+    "wad_first4_match": "IWAD",
+    "window_title": "Freedoom: Phase 1",
+    "window_handle_verified": true,
+    "frames_captured": ["frame_35.raw","frame_70.raw","frame_105.raw","frame_150.raw"],
+    "frame_resolution": "640x400 x 32bpp RGBA (DOOMGENERIC_RESX/Y, bpp 32, framebuffer 1024000 bytes = 640*400*4)",
+    "doom_tick_executed": "doomgeneric_Create + loop doomgeneric_Tick verified via frame hash change (35==70 early solid, 70!=105, 105!=150)",
+    "claim": "DOOM_NATIVE_REFERENCE_RUNNING = DEMONSTRATED — window rendered, game loop running, framebuffer produced by Doom engine, not host"
+  },
+  "unshackled_separation": "This baseline is C native reference only. It does NOT imply DOOM_ON_MALBOLGE. Candidate Malbolge run must later reproduce same H(frame) via C/EIR->HeLL->Unshackled VM, host only I/O."
+}

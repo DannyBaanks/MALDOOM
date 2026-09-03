@@ -1,0 +1,40 @@
+{
+  "schema": "maldoom.classic_anchor_v1.p1_non_echo_branch/1",
+  "target": "B2_CLASSIC_59049",
+  "program_sha256": "3d58a7f9e0addbbbace2f2809e4a8c9e0c50888e8c91483169618db14816aa37",
+  "max_steps": 200,
+  "cases": [
+    {
+      "input": "0",
+      "expected_halt": true,
+      "gost": {
+        "stdout": "0\r\n",
+        "stderr": "steps=136 output=1 terminated=yes\r\n",
+        "exit_code": 0
+      },
+      "oracle": {
+        "stdout": "0",
+        "halted": true,
+        "halt_reason": "halt_opcode",
+        "steps": 136
+      }
+    },
+    {
+      "input": "1",
+      "expected_halt": false,
+      "gost": {
+        "stdout": "11111111111\r\n",
+        "stderr": "steps=200 output=11 terminated=no (timeout)\r\n",
+        "exit_code": 3
+      },
+      "oracle": {
+        "stdout": "11111111111",
+        "halted": false,
+        "halt_reason": "max_steps",
+        "steps": 200
+      }
+    }
+  ],
+  "claim": "CLASSIC_NON_ECHO_INPUT_BRANCH_SEED_DEMONSTRATED",
+  "exclusion": "This seed is not program_v1.mal and does not encode, decode, checkpoint, or resume an anchor."
+}

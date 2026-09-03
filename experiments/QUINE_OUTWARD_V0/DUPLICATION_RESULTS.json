@@ -1,0 +1,54 @@
+﻿{
+  "results": [
+    {
+      "name": "separated",
+      "n": 12,
+      "A_sig_before": 1,
+      "A_sig_after": 1,
+      "B_sig_before": 0,
+      "B_sig_after": 0,
+      "kind": "INDEPENDENCE",
+      "final_sha": "55ca601c78f6591b"
+    },
+    {
+      "name": "adjacent",
+      "n": 9,
+      "A_sig_before": 1,
+      "A_sig_after": 0,
+      "B_sig_before": 0,
+      "B_sig_after": 0,
+      "kind": "PARTIAL",
+      "final_sha": "7067aafb3eda0126"
+    },
+    {
+      "name": "shared_boundary",
+      "n": 8,
+      "A_sig_before": 1,
+      "A_sig_after": 0,
+      "B_sig_before": 0,
+      "B_sig_after": 1,
+      "kind": "DESTRUCTION",
+      "final_sha": "7f06d2f58f542178"
+    },
+    {
+      "name": "offset_A0_B1",
+      "n": 12,
+      "A_sig_before": 0,
+      "A_sig_after": 0,
+      "B_sig_before": 1,
+      "B_sig_after": 1,
+      "kind": "INDEPENDENCE",
+      "final_sha": "fa76b1ccba156c04"
+    },
+    {
+      "name": "close_A1_B1",
+      "n": 9,
+      "A_sig_before": 1,
+      "A_sig_after": 0,
+      "B_sig_before": 1,
+      "B_sig_after": 0,
+      "kind": "DESTRUCTION",
+      "final_sha": "c2db3059fd3f8fa7"
+    }
+  ]
+}

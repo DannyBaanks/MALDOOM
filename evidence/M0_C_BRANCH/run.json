@@ -1,0 +1,19 @@
+[
+  {
+    "input": "",
+    "input_bytes_hex": "",
+    "expected": "NONZERO\n",
+    "expected_norm": "NONZERO\n",
+    "observed": "NONZERO\r\n",
+    "observed_norm": "NONZERO\n",
+    "observed_hex": "4e4f4e5a45524f0d0a",
+    "stdout_raw": "NONZERO\r\n",
+    "stderr": "",
+    "exit_code": 0,
+    "wall_time_s": 0.015181541442871094,
+    "match": true,
+    "artifact_sha": "52c12113150e3994ab20c00091e284f855be671273b0fddc0782b85916102a1c",
+    "pipeline": "8CC_FAILED_127+GCC_REF",
+    "host_audit": "PASS"
+  }
+]

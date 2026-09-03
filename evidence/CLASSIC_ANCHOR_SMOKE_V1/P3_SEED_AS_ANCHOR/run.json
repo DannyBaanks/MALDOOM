@@ -1,0 +1,112 @@
+{
+  "schema": "maldoom.classic_anchor_v1.p3_seed_as_anchor/1",
+  "target": "B2_CLASSIC_59049",
+  "program_sha256": "3d58a7f9e0addbbbace2f2809e4a8c9e0c50888e8c91483169618db14816aa37",
+  "max_steps": 200,
+  "cases": [
+    {
+      "input": "0",
+      "expected_halt": true,
+      "anchor_first": {
+        "gost": {
+          "steps": "steps=136 output=1 terminated=yes\r\n",
+          "exit_code": 0
+        },
+        "oracle": {
+          "steps": 136,
+          "halted": true,
+          "halt_reason": "halt_opcode"
+        },
+        "output_prefix": "0\r\n"
+      },
+      "anchor_resume": {
+        "gost": {
+          "steps": "steps=136 output=1 terminated=yes\r\n",
+          "exit_code": 0
+        },
+        "oracle": {
+          "steps": 136,
+          "halted": true,
+          "halt_reason": "halt_opcode"
+        },
+        "output_prefix": "0\r\n"
+      },
+      "anchor_reproduced": true,
+      "gost_first": {
+        "stdout": "0\r\n",
+        "stderr": "steps=136 output=1 terminated=yes\r\n",
+        "exit_code": 0
+      },
+      "oracle_first": {
+        "stdout": "0",
+        "halted": true,
+        "halt_reason": "halt_opcode",
+        "steps": 136
+      },
+      "gost_resume": {
+        "stdout": "0\r\n",
+        "stderr": "steps=136 output=1 terminated=yes\r\n",
+        "exit_code": 0
+      },
+      "oracle_resume": {
+        "stdout": "0",
+        "halted": true,
+        "halt_reason": "halt_opcode",
+        "steps": 136
+      }
+    },
+    {
+      "input": "1",
+      "expected_halt": false,
+      "anchor_first": {
+        "gost": {
+          "steps": "steps=200 output=11 terminated=no (timeout)\r\n",
+          "exit_code": 3
+        },
+        "oracle": {
+          "steps": 200,
+          "halted": false,
+          "halt_reason": "max_steps"
+        },
+        "output_prefix": "11111111111\r"
+      },
+      "anchor_resume": {
+        "gost": {
+          "steps": "steps=200 output=11 terminated=no (timeout)\r\n",
+          "exit_code": 3
+        },
+        "oracle": {
+          "steps": 200,
+          "halted": false,
+          "halt_reason": "max_steps"
+        },
+        "output_prefix": "11111111111\r"
+      },
+      "anchor_reproduced": true,
+      "gost_first": {
+        "stdout": "11111111111\r\n",
+        "stderr": "steps=200 output=11 terminated=no (timeout)\r\n",
+        "exit_code": 3
+      },
+      "oracle_first": {
+        "stdout": "11111111111",
+        "halted": false,
+        "halt_reason": "max_steps",
+        "steps": 200
+      },
+      "gost_resume": {
+        "stdout": "11111111111\r\n",
+        "stderr": "steps=200 output=11 terminated=no (timeout)\r\n",
+        "exit_code": 3
+      },
+      "oracle_resume": {
+        "stdout": "11111111111",
+        "halted": false,
+        "halt_reason": "max_steps",
+        "steps": 200
+      }
+    }
+  ],
+  "claim": "CLASSIC_SEED_ANCHOR_REPLAY_DEMONSTRATED",
+  "exclusion": "Anchor is opaque replay of observable behavior. No encode/decode, no internal state, no fresh VM boundary yet."
+}

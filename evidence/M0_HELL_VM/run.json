@@ -1,0 +1,17 @@
+﻿{
+  "test": "M0_HELL_VM — HeLL → LMFAO → Unshackled VM proof (example_cat_halt_on_eof)",
+  "artifact_hell": "example_cat_halt_on_eof.hell (4106 B, LMFAO hell format)",
+  "artifact_mu": "test.mu (208607 B, Malbolge Unshackled)",
+  "artifact_mu_sha256": "7A8C51167EF5F86834328C7B14AAA220AA2A5B206204CF0F22E6D288B741A464",
+  "artifact_hell_sha256": "A35B8F0A571A13D78D956B991EB73C3ECD2C36C251532082B60AE73D8D9F95AC",
+  "vm": "vendor/Unshackled.exe (74953 B, compiled from Unshackled.c D772B096E925A0F32AC283E59E666BCCCC4B5FEBC2287FD1E0D2BBBB9372C3A7)",
+  "tool": "LMFAO v0.1.5 (assembled on Windows via win_flex 2.6.4 + win_bison 3.8.2 + gcc 16.1, patched lmfao.l %option noyywrap)",
+  "runs": [
+    {"input": "Hello\\n", "expected": "Hello\\n", "observed_file": "observed_Hello.bin", "observed_hex": "48656c6c6f0a", "match": true, "wall_s": 0.33},
+    {"input": "ABC\\n", "expected": "ABC\\n", "observed_file": "observed_ABC.bin", "match": true},
+    {"input": "", "expected": "", "observed_file": "observed_empty.bin", "match": true}
+  ],
+  "command": "vendor/LMFAO/bin/lmfao example_cat_halt_on_eof.hell -o test.mu && echo Hello | vendor/Unshackled.exe test.mu",
+  "pipeline": "HeLL→LMFAO→Unshackled VM demonstrated (TARGET_A)",
+  "host_audit": "PASS — host not involved"
+}

@@ -1,0 +1,126 @@
+﻿{
+  "results": [
+    {
+      "n": 3,
+      "period0": 6,
+      "period1": 2,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 1,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 4,
+      "period0": 4,
+      "period1": 4,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 2,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 5,
+      "period0": 10,
+      "period1": 10,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 2,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 6,
+      "period0": 6,
+      "period1": 6,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 4,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 7,
+      "period0": 14,
+      "period1": 14,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 6,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 8,
+      "period0": 8,
+      "period1": 8,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 2,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 9,
+      "period0": 18,
+      "period1": 18,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 4,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 10,
+      "period0": 10,
+      "period1": 10,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 2,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 11,
+      "period0": 22,
+      "period1": 22,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 4,
+        "sig0": 0,
+        "sig1": 1
+      }
+    },
+    {
+      "n": 12,
+      "period0": 12,
+      "period1": 12,
+      "min_distinct_window": {
+        "w": 1,
+        "lo": 10,
+        "sig0": 0,
+        "sig1": 1
+      }
+    }
+  ],
+  "smallest_microcell": {
+    "n": 3,
+    "period0": 6,
+    "period1": 2,
+    "min_distinct_window": {
+      "w": 1,
+      "lo": 1,
+      "sig0": 0,
+      "sig1": 1
+    }
+  },
+  "note": "microcell = (n, window lo..lo+w) with stable distinct signature"
+}
